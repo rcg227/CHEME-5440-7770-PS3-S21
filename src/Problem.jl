@@ -41,25 +41,50 @@ function generate_problem_dictionary()
 
 	# Setup the flux bounds array -
 	flux_bounds_array = zeros(number_of_reactions,2)
-	# TODO: update the flux_bounds_array for each reaction in your network
-	# TODO: col 1 => lower bound
-	# TODO: col 2 => upper bound
-	# TODO: each row is a reaction
+	# TODO: update the flux_bounds_array for each reaction in your network, col 1 => lower bound, col 2 => upper bound, each row is a reaction
+	#flux in units of micromole/gDW-sec
+	flux_bounds_array[1,1]=0
+	flux_bounds_array[1,2]=2.03 #Vmax for v1
+	flux_bounds_array[2,1]=0
+	flux_bounds_array[2,2]=0.345 #Vmax for v2
+	flux_bounds_array[3,1]=0
+	flux_bounds_array[3,2]=2.49 #Vmax for v3
+	flux_bounds_array[4,1]=0
+	flux_bounds_array[4,2]=0.881 #Vmax for v4
+	flux_bounds_array[5,1]=0
+	flux_bounds_array[5,2]=0.137 #Vmax for v5
+
+	flux_bounds_array[6,1]=0
+	flux_bounds_array[6,2]=2.78 #upper bound for b1, in micromole/gDW-sec
+	flux_bounds_array[7,1]=0
+	flux_bounds_array[7,2]=2.78 #upper bound for b2
+	flux_bounds_array[8,1]=0
+	flux_bounds_array[8,2]=2.78 #upper bound for b3
+	flux_bounds_array[9,1]=0
+	flux_bounds_array[9,2]=2.78 #upper bound for b4
+	flux_bounds_array[10,1]=0
+	flux_bounds_array[10,2]=2.78 #upper bound for b5
 
 	# Setup default species bounds array -
 	species_bounds_array = zeros(number_of_species,2)
 	# TODO: NOTE - we by default assume Sv = 0, so species_bounds_array should be a M x 2 array of zeros
-	# TODO: however, if you formulate the problem differently you *may* need to change this 
+	# TODO: however, if you formulate the problem differently you *may* need to change this
+	# so...I don't need to change anything here, right?
 
 	# Min/Max flag - default is minimum -
 	is_minimum_flag = true
 
 	# Setup the objective coefficient array -
 	objective_coefficient_array = zeros(number_of_reactions)
-	# TODO: update me to maximize Urea production (Urea leaving the virtual box) 
-	# TODO: if is_minimum_flag = true => put a -1 in the index for Urea export
-	
-	
+	# TODO: update me to maximize Urea production (Urea leaving the virtual box)
+	# what is the physical significance of this? Did I code it corectly?
+	# TODO: if is_minimum_flag = true => put a -1 in the index for Urea export (reaction b4)
+
+	if is_minimum_flag == true
+		objective_coefficient_array[9]= -1.0
+	end
+
+
 	# =============================== DO NOT EDIT BELOW THIS LINE ============================== #
 	data_dictionary = Dict{String,Any}()
 	data_dictionary["stoichiometric_matrix"] = stoichiometric_matrix
