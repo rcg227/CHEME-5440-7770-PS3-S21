@@ -84,6 +84,7 @@ function generate_problem_dictionary()
 		objective_coefficient_array[9]= -1.0
 	end
 
+# this is leaving all other coefficients as zero...is that what I want to be doing??
 
 	# =============================== DO NOT EDIT BELOW THIS LINE ============================== #
 	data_dictionary = Dict{String,Any}()

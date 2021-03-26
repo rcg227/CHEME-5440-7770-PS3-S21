@@ -1,7 +1,4 @@
-# Stoichiometric Matrix File
-# just the matrix, not a variable defined as a matrix (is that correct?)
-
-[-1 0 0 0 0 0 0 0 0 0
+-1 0 0 0 0 0 0 0 0 0
 -1 0 0 1 2 0 0 0 0 0
 -1 0 0 0 0 0 1 0 0 0
 1 0 0 0 0 0 0 0 0 0
@@ -18,4 +15,4 @@
 0 0 0 0 -2 0 0 0 0 0
 0 0 0 0 -1 0 0 0 0 0
 0 0 0 0 1 0 0 0 0 0
-0 0 0 0 2 0 0 0 0 0];
+0 0 0 0 2 0 0 0 0 0
