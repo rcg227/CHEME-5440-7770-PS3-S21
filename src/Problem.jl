@@ -51,30 +51,42 @@ function generate_problem_dictionary()
 	flux_bounds_array[3,2]=2.49 #Vmax for v3
 	flux_bounds_array[4,1]=0
 	flux_bounds_array[4,2]=0.881 #Vmax for v4
-	flux_bounds_array[5,1]=0
+	flux_bounds_array[5,1]=-0.137 #Vmax for v5 (reverse rxn)
 	flux_bounds_array[5,2]=0.137 #Vmax for v5 (forward rxn)
-	flux_bounds_array[6,1]=0
-	flux_bounds_array[6,2]=0.137 #Vmax for v6 (reverse rxn); assuming reverse rxn has same Vmax as forward rxn
 
+	flux_bounds_array[6,1]=0
+	flux_bounds_array[6,2]=2.78 #upper bound for b1, in micromole/gDW-sec
 	flux_bounds_array[7,1]=0
-	flux_bounds_array[7,2]=2.78 #upper bound for b1, in micromole/gDW-sec
+	flux_bounds_array[7,2]=2.78 #upper bound for b2, in micromole/gDW-sec
 	flux_bounds_array[8,1]=0
-	flux_bounds_array[8,2]=2.78 #upper bound for b2
+	flux_bounds_array[8,2]=2.78 #upper bound for b3
 	flux_bounds_array[9,1]=0
-	flux_bounds_array[9,2]=2.78 #upper bound for b3
+	flux_bounds_array[9,2]=2.78 #upper bound for b4
+# additional b rxns:
 	flux_bounds_array[10,1]=0
-	flux_bounds_array[10,2]=2.78 #upper bound for b4
-	# additional b rxns:
+	flux_bounds_array[10,2]=2.78 #upper bound for b5
 	flux_bounds_array[11,1]=0
-	flux_bounds_array[11,2]=2.78 #upper bound for b5
+	flux_bounds_array[11,2]=2.78 #upper bound for b6
 	flux_bounds_array[12,1]=0
-	flux_bounds_array[12,2]=2.78 #upper bound for b6
+	flux_bounds_array[12,2]=2.78 #upper bound for b7
 	flux_bounds_array[13,1]=0
-	flux_bounds_array[13,2]=2.78 #upper bound for b7
+	flux_bounds_array[13,2]=2.78 #upper bound for b8
 	flux_bounds_array[14,1]=0
-	flux_bounds_array[14,2]=2.78 #upper bound for b8
+	flux_bounds_array[14,2]=2.78 #upper bound for b9
 	flux_bounds_array[15,1]=0
-	flux_bounds_array[15,2]=2.78 #upper bound for b9
+	flux_bounds_array[15,2]=2.78 #upper bound for b10
+	flux_bounds_array[16,1]=0
+	flux_bounds_array[16,2]=2.78 #upper bound for b11
+	flux_bounds_array[17,1]=0
+	flux_bounds_array[17,2]=2.78 #upper bound for b12
+	flux_bounds_array[18,1]=0
+	flux_bounds_array[18,2]=2.78 #upper bound for b13
+	flux_bounds_array[19,1]=0
+	flux_bounds_array[19,2]=2.78 #upper bound for b14
+	flux_bounds_array[20,1]=0
+	flux_bounds_array[20,2]=2.78 #upper bound for b15
+	flux_bounds_array[21,1]=0
+	flux_bounds_array[21,2]=2.78 #upper bound for b16
 
 	# Setup default species bounds array -
 	species_bounds_array = zeros(number_of_species,2)
